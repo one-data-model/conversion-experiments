@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Copyright 2018-2019 Open Connectivity Foundation, Inc. All rights reserved.
+BSD-3-Clause
+-->
+<LWM2M xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://openmobilealliance.org/tech/profiles/LWM2M.xsd">
+    <Object ObjectType="MODefinition">
+        <Name>printer.3d</Name>
+        <Description1>This Resource describes the attributes associated with 3D Printer. The type of 3D printing technology is specified by an enumerated string value. The maximum sizes in mm are included for the x, y, and z dimensions. A designation of whether the device is capable of WAN connectivity is represented in a boolean. The memory capacity is captured in MB.</Description1>
+        <ObjectID>65535</ObjectID>
+        <ObjectURN>urn:oma:lwm2m:ext:65535</ObjectURN>
+        <LWM2MVersion>1.0</LWM2MVersion>
+        <ObjectVersion>1.0</ObjectVersion>
+        <MultipleInstances>Multiple</MultipleInstances>
+        <Mandatory>Optional</Mandatory>
+        <Resources>
+            <Item ID="1">
+                <Name>printsizey</Name>
+                <Operations>R</Operations>
+                <MultipleInstances>Single</MultipleInstances>
+                <Mandatory>Mandatory</Mandatory>
+                <Type>Float</Type>
+                <RangeEnumeration/>
+                <Units/>
+                <Description>This Property represents the maximum size of printing object in the direction of Y-axis. The unit is mm.</Description>
+            </Item>
+            <Item ID="2">
+                <Name>memorysize</Name>
+                <Operations>R</Operations>
+                <MultipleInstances>Single</MultipleInstances>
+                <Mandatory>Mandatory</Mandatory>
+                <Type>Float</Type>
+                <RangeEnumeration/>
+                <Units/>
+                <Description>This Property represents the total memory size of the printer. The unit is MB(Mega Bytes)</Description>
+            </Item>
+            <Item ID="3">
+                <Name>3dprinttype</Name>
+                <Operations>R</Operations>
+                <MultipleInstances>Single</MultipleInstances>
+                <Mandatory>Mandatory</Mandatory>
+                <Type>String</Type>
+                <RangeEnumeration/>
+                <Units/>
+                <Description>The type of 3D printing technology.</Description>
+            </Item>
+            <Item ID="4">
+                <Name>wanconnected</Name>
+                <Operations>R</Operations>
+                <MultipleInstances>Single</MultipleInstances>
+                <Mandatory>Mandatory</Mandatory>
+                <Type>Boolean</Type>
+                <RangeEnumeration/>
+                <Units/>
+                <Description>This Property indicates the connectivity capability of the 3D printer. If the value is false, the printer does not have network facility to Wide Area Network such as internet and GSM. If the value is true, the printer has network connectivity</Description>
+            </Item>
+            <Item ID="5">
+                <Name>printsizex</Name>
+                <Operations>R</Operations>
+                <MultipleInstances>Single</MultipleInstances>
+                <Mandatory>Mandatory</Mandatory>
+                <Type>Float</Type>
+                <RangeEnumeration/>
+                <Units/>
+                <Description>This Property represents the maximum size of printing object in the direction of X-axis. The unit is mm.</Description>
+            </Item>
+            <Item ID="6">
+                <Name>printsizez</Name>
+                <Operations>R</Operations>
+                <MultipleInstances>Single</MultipleInstances>
+                <Mandatory>Mandatory</Mandatory>
+                <Type>Float</Type>
+                <RangeEnumeration/>
+                <Units/>
+                <Description>This Property represents the maximum size of printing object in the direction of Z-axis. The unit is mm.</Description>
+            </Item>
+        </Resources>
+    </Object>
+</LWM2M>

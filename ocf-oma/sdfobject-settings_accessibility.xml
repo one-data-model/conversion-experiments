@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Copyright 2020 Open Connectivity Foundation, Inc. All rights reserved.
+BSD-3-Clause
+-->
+<LWM2M xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://openmobilealliance.org/tech/profiles/LWM2M.xsd">
+    <Object ObjectType="MODefinition">
+        <Name>settings.accessibility</Name>
+        <Description1>Gets current device accessibility settings.</Description1>
+        <ObjectID>65535</ObjectID>
+        <ObjectURN>urn:oma:lwm2m:ext:65535</ObjectURN>
+        <LWM2MVersion>1.0</LWM2MVersion>
+        <ObjectVersion>1.0</ObjectVersion>
+        <MultipleInstances>Multiple</MultipleInstances>
+        <Mandatory>Optional</Mandatory>
+        <Resources>
+            <Item ID="1">
+                <Name>voice-guide</Name>
+                <Operations>RW</Operations>
+                <MultipleInstances>Single</MultipleInstances>
+                <Type>Boolean</Type>
+                <RangeEnumeration/>
+                <Units/>
+                <Description>Turns on or off voice guide.</Description>
+            </Item>
+            <Item ID="2">
+                <Name>video-description</Name>
+                <Operations>RW</Operations>
+                <MultipleInstances>Single</MultipleInstances>
+                <Type>Boolean</Type>
+                <RangeEnumeration/>
+                <Units/>
+                <Description>Turns on or off video description.</Description>
+            </Item>
+            <Item ID="3">
+                <Name>caption</Name>
+                <Operations>RW</Operations>
+                <MultipleInstances>Single</MultipleInstances>
+                <Type>Boolean</Type>
+                <RangeEnumeration/>
+                <Units/>
+                <Description>Turns on or off accessibility caption.</Description>
+            </Item>
+            <Item ID="4">
+                <Name>caption-mode</Name>
+                <Operations>RW</Operations>
+                <MultipleInstances>Single</MultipleInstances>
+                <Type>String</Type>
+                <RangeEnumeration/>
+                <Units/>
+                <Description>Accessibility Caption Mode. Client can change caption-mode using supported-caption-modes property.</Description>
+            </Item>
+            <Item ID="5">
+                <Name>supported-caption-modes</Name>
+                <Operations>R</Operations>
+                <MultipleInstances>Multiple</MultipleInstances>
+                <Type>String</Type>
+                <RangeEnumeration/>
+                <Units/>
+                <Description>The array of possible caption modes the device supports. This property should be added if caption-mode is supported.</Description>
+            </Item>
+            <Item ID="6">
+                <Name>high-contrast</Name>
+                <Operations>RW</Operations>
+                <MultipleInstances>Single</MultipleInstances>
+                <Type>Boolean</Type>
+                <RangeEnumeration/>
+                <Units/>
+                <Description>Turns on or off high contrast.</Description>
+            </Item>
+            <Item ID="7">
+                <Name>enlarge</Name>
+                <Operations>RW</Operations>
+                <MultipleInstances>Single</MultipleInstances>
+                <Type>Boolean</Type>
+                <RangeEnumeration/>
+                <Units/>
+                <Description>Turns on or off print enlargement.</Description>
+            </Item>
+        </Resources>
+    </Object>
+</LWM2M>

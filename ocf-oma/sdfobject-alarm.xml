@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Copyright 2018-2019 Open Connectivity Foundation, Inc. All rights reserved.
+BSD-3-Clause
+-->
+<LWM2M xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://openmobilealliance.org/tech/profiles/LWM2M.xsd">
+    <Object ObjectType="MODefinition">
+        <Name>alarm</Name>
+        <Description1>This Resource describes the Properties associated with alarm status.</Description1>
+        <ObjectID>65535</ObjectID>
+        <ObjectURN>urn:oma:lwm2m:ext:65535</ObjectURN>
+        <LWM2MVersion>1.0</LWM2MVersion>
+        <ObjectVersion>1.0</ObjectVersion>
+        <MultipleInstances>Multiple</MultipleInstances>
+        <Mandatory>Optional</Mandatory>
+        <Resources>
+            <Item ID="1">
+                <Name>status</Name>
+                <Operations>RW</Operations>
+                <MultipleInstances>Single</MultipleInstances>
+                <Mandatory>Mandatory</Mandatory>
+                <Type>Boolean</Type>
+                <RangeEnumeration/>
+                <Units/>
+                <Description>This Property describes the status of the alarm: true - on, false - off.</Description>
+            </Item>
+            <Item ID="2">
+                <Name>duration</Name>
+                <Operations>RW</Operations>
+                <MultipleInstances>Single</MultipleInstances>
+                <Mandatory>Optional</Mandatory>
+                <Type>Float</Type>
+                <RangeEnumeration/>
+                <Units/>
+                <Description>This Property describes the alarm duration (seconds).</Description>
+            </Item>
+            <Item ID="3">
+                <Name>time</Name>
+                <Operations>RW</Operations>
+                <MultipleInstances>Single</MultipleInstances>
+                <Mandatory>Optional</Mandatory>
+                <Type>String</Type>
+                <RangeEnumeration/>
+                <Units/>
+                <Description>This Property describes the alarm time using ISO 8601 datetime format (e.g: 2007-04-05T14:30Z, 2007-04-05T14:30+09:00).</Description>
+            </Item>
+            <Item ID="4">
+                <Name>alarmtype</Name>
+                <Operations>R</Operations>
+                <MultipleInstances>Single</MultipleInstances>
+                <Mandatory>Optional</Mandatory>
+                <Type>String</Type>
+                <RangeEnumeration/>
+                <Units/>
+                <Description>The Alarm Type.</Description>
+            </Item>
+            <Item ID="5">
+                <Name>range</Name>
+                <Operations>R</Operations>
+                <MultipleInstances>Multiple</MultipleInstances>
+                <Mandatory>Optional</Mandatory>
+                <Type>Float</Type>
+                <RangeEnumeration/>
+                <Units/>
+                <Description>The valid range for the Property in the Resource as a number. The first value in the array is the minimum value, the second value in the array is the maximum value.</Description>
+            </Item>
+            <Item ID="6">
+                <Name>step</Name>
+                <Operations>R</Operations>
+                <MultipleInstances>Single</MultipleInstances>
+                <Mandatory>Optional</Mandatory>
+                <Type>Float</Type>
+                <RangeEnumeration/>
+                <Units/>
+                <Description>Step value across the defined range an integer when the range is a number.  This is the increment for valid values across the range; so if range is 0.0..10.0 and step is 2.5 then valid values are 0.0,2.5,5.0,7.5,10.0.</Description>
+            </Item>
+            <Item ID="7">
+                <Name>precision</Name>
+                <Operations>R</Operations>
+                <MultipleInstances>Single</MultipleInstances>
+                <Mandatory>Optional</Mandatory>
+                <Type>Float</Type>
+                <RangeEnumeration/>
+                <Units/>
+                <Description>When exposed the value in 'precision' provides a +/- tolerance against the Properties in the Resource. Thus if a Property is UPDATED to a value and that Property then RETRIEVED, the RETRIEVED value is valid if in the range of the set value +/- precision</Description>
+            </Item>
+        </Resources>
+    </Object>
+</LWM2M>

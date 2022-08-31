@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+copyright 2016-2017, 2019 Open Connectivity Foundation, Inc. All rights reserved.
+BSD-3-Clause
+-->
+<LWM2M xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://openmobilealliance.org/tech/profiles/LWM2M.xsd">
+    <Object ObjectType="MODefinition">
+        <Name>mediasource</Name>
+        <Description1>This Resource defines a single media source that exists on a device. The source can be an input source or output source, this resource is agnostic of that. The Property "sourceName" specifies a pre-defined media input or output (e. g. "HDMI", "DVI"). The Property "sourceNumber" is a label to specify the instance (e. g. "PC", "1"). The Property "sourceType" is an enumeration defining whether the source is audio, video or both. The Property "status" is a boolean that determines if the specific source instance is selected or not. A status of true means that the source instance is selected. A status of false means that the source instance is not selected.</Description1>
+        <ObjectID>65535</ObjectID>
+        <ObjectURN>urn:oma:lwm2m:ext:65535</ObjectURN>
+        <LWM2MVersion>1.0</LWM2MVersion>
+        <ObjectVersion>1.0</ObjectVersion>
+        <MultipleInstances>Multiple</MultipleInstances>
+        <Mandatory>Optional</Mandatory>
+        <Resources>
+            <Item ID="1">
+                <Name>status</Name>
+                <Operations>RW</Operations>
+                <MultipleInstances>Single</MultipleInstances>
+                <Mandatory>Mandatory</Mandatory>
+                <Type>Boolean</Type>
+                <RangeEnumeration/>
+                <Units/>
+                <Description>Specifies if the specific source instance is selected or not.</Description>
+            </Item>
+            <Item ID="2">
+                <Name>sourceType</Name>
+                <Operations>R</Operations>
+                <MultipleInstances>Single</MultipleInstances>
+                <Mandatory>Optional</Mandatory>
+                <Type>String</Type>
+                <RangeEnumeration/>
+                <Units/>
+                <Description>Specifies the type of the source.</Description>
+            </Item>
+            <Item ID="3">
+                <Name>sourceName</Name>
+                <Operations>RW</Operations>
+                <MultipleInstances>Single</MultipleInstances>
+                <Mandatory>Mandatory</Mandatory>
+                <Type>String</Type>
+                <RangeEnumeration/>
+                <Units/>
+                <Description>Specifies a pre-defined media input or output.</Description>
+            </Item>
+            <Item ID="4">
+                <Name>sourceNumber</Name>
+                <Operations>RW</Operations>
+                <MultipleInstances>Single</MultipleInstances>
+                <Mandatory>Optional</Mandatory>
+                <Type>String</Type>
+                <RangeEnumeration/>
+                <Units/>
+                <Description>Label to specify the instance.</Description>
+            </Item>
+        </Resources>
+    </Object>
+</LWM2M>

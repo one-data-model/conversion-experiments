@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+copyright 2016-2021 Open Connectivity Foundation, Inc. All rights reserved.
+BSD-3-Clause
+-->
+<LWM2M xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://openmobilealliance.org/tech/profiles/LWM2M.xsd">
+    <Object ObjectType="MODefinition">
+        <Name>delaydefrost</Name>
+        <Description1>This Resource describes the delay defrost function as defined by the US Energy Star Specifications. See Energy Star Refrigerator Requirements Version 5 Section 4). (https://www. energystar. gov/sites/default/files/specs//private/ENERGY%20STAR%20Final%20Version%205. 0%20Residential%20Refrigerators%20and%20Freezers%20Program%20Requirements. pdf) The Property "status" is a boolean indicating whether the function is on, if off then defrost is scheduled as part of normal device operation. The Property "startTime" is an RFC3339 full-time encoded start time for the interval in which defrost shall not occur. The Property "stopTime" is an RFC3339 full-time encoded stop time for the interval in which defrost shall not occur. The Property "interval" with additional range restrictions is the time in minutes of the period that starts at starttime (if not present the default is 240). The Properties "stopTime" and "interval" are mutually exclusive; they cannot both be present in a Resource instance.</Description1>
+        <ObjectID>65535</ObjectID>
+        <ObjectURN>urn:oma:lwm2m:ext:65535</ObjectURN>
+        <LWM2MVersion>1.0</LWM2MVersion>
+        <ObjectVersion>1.0</ObjectVersion>
+        <MultipleInstances>Multiple</MultipleInstances>
+        <Mandatory>Optional</Mandatory>
+        <Resources>
+            <Item ID="1">
+                <Name>status</Name>
+                <Operations>RW</Operations>
+                <MultipleInstances>Single</MultipleInstances>
+                <Mandatory>Mandatory</Mandatory>
+                <Type>Boolean</Type>
+                <RangeEnumeration/>
+                <Units/>
+                <Description>Indicates whether any supported delay defrost function is active.</Description>
+            </Item>
+            <Item ID="2">
+                <Name>interval</Name>
+                <Operations>RW</Operations>
+                <MultipleInstances>Single</MultipleInstances>
+                <Mandatory>Optional</Mandatory>
+                <Type>Integer</Type>
+                <RangeEnumeration>1..1440</RangeEnumeration>
+                <Units/>
+                <Description>Defrost interval as defined by Energy Star.</Description>
+            </Item>
+            <Item ID="3">
+                <Name>stopTime</Name>
+                <Operations>RW</Operations>
+                <MultipleInstances>Single</MultipleInstances>
+                <Mandatory>Optional</Mandatory>
+                <Type>String</Type>
+                <RangeEnumeration/>
+                <Units/>
+                <Description>Stop time for the time period, if present interval cannot be present.  This is the time of day at which the delay interval stops.</Description>
+            </Item>
+            <Item ID="4">
+                <Name>startTime</Name>
+                <Operations>RW</Operations>
+                <MultipleInstances>Single</MultipleInstances>
+                <Mandatory>Optional</Mandatory>
+                <Type>String</Type>
+                <RangeEnumeration/>
+                <Units/>
+                <Description>Start time for the time period. This is the time of day at which the delay interval starts.</Description>
+            </Item>
+        </Resources>
+    </Object>
+</LWM2M>

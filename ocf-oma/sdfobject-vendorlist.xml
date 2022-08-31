@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+copyright 2021 Open Connectivity Foundation, Inc. All rights reserved.
+BSD-3-Clause
+-->
+<LWM2M xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://openmobilealliance.org/tech/profiles/LWM2M.xsd">
+    <Object ObjectType="MODefinition">
+        <Name>vendorlist</Name>
+        <Description1>This Resource describes the current vendor and supported vendors for an OCF Device (e. g. the set of possible A/C vendors to which an A/C Assistant can connect). The current vendor can be read or set, setting indicates a desired vendor. A device may reject an attempt to set a vendor that is not found in supported vendors. The Property "supportedVendors" is an array of the possible vendor names. The value of "supportedVendors" is Device specific. The Property "currentVendor" is one vendor selected from "supportedVendors". The Property "status" is current operation status when the "currentVendor" is set.</Description1>
+        <ObjectID>65535</ObjectID>
+        <ObjectURN>urn:oma:lwm2m:ext:65535</ObjectURN>
+        <LWM2MVersion>1.0</LWM2MVersion>
+        <ObjectVersion>1.0</ObjectVersion>
+        <MultipleInstances>Multiple</MultipleInstances>
+        <Mandatory>Optional</Mandatory>
+        <Resources>
+            <Item ID="1">
+                <Name>currentVendor</Name>
+                <Operations>RW</Operations>
+                <MultipleInstances>Single</MultipleInstances>
+                <Type>String</Type>
+                <RangeEnumeration/>
+                <Units/>
+                <Description>The current vendor selected from "supportedVendors".</Description>
+            </Item>
+            <Item ID="2">
+                <Name>supportedVendors</Name>
+                <Operations>R</Operations>
+                <MultipleInstances>Multiple</MultipleInstances>
+                <Type>String</Type>
+                <RangeEnumeration/>
+                <Units/>
+                <Description>The array of the possible vendors.</Description>
+            </Item>
+            <Item ID="3">
+                <Name>status</Name>
+                <Operations>RW</Operations>
+                <MultipleInstances>Single</MultipleInstances>
+                <Type>String</Type>
+                <RangeEnumeration/>
+                <Units/>
+                <Description>The current operation status. Only when the "status" is "processing", it is writable and it only can be set to "failed" or "vendorset". The device should reject an attempt to set the "status" to values other than "failed" and "vendorset".And the device should reject any attempt to update the "status" when the "status" is not "processing".</Description>
+            </Item>
+        </Resources>
+    </Object>
+</LWM2M>

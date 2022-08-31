@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Copyright 2020 Open Connectivity Foundation, Inc. All rights reserved.
+BSD-3-Clause
+-->
+<LWM2M xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://openmobilealliance.org/tech/profiles/LWM2M.xsd">
+    <Object ObjectType="MODefinition">
+        <Name>settings.broadcasting</Name>
+        <Description1>Gets current device broadcasting settings.</Description1>
+        <ObjectID>65535</ObjectID>
+        <ObjectURN>urn:oma:lwm2m:ext:65535</ObjectURN>
+        <LWM2MVersion>1.0</LWM2MVersion>
+        <ObjectVersion>1.0</ObjectVersion>
+        <MultipleInstances>Multiple</MultipleInstances>
+        <Mandatory>Optional</Mandatory>
+        <Resources>
+            <Item ID="1">
+                <Name>antenna</Name>
+                <Operations>RW</Operations>
+                <MultipleInstances>Single</MultipleInstances>
+                <Type>String</Type>
+                <RangeEnumeration/>
+                <Units/>
+                <Description>Type of antenna. Client can change antenna using supported-antennas property.</Description>
+            </Item>
+            <Item ID="2">
+                <Name>supported-antennas</Name>
+                <Operations>R</Operations>
+                <MultipleInstances>Multiple</MultipleInstances>
+                <Type>String</Type>
+                <RangeEnumeration/>
+                <Units/>
+                <Description>The array of possible antennas the device supports. This property should be added if antenna is supported.</Description>
+            </Item>
+            <Item ID="3">
+                <Name>location-info</Name>
+                <Operations>RW</Operations>
+                <MultipleInstances>Single</MultipleInstances>
+                <Type>String</Type>
+                <RangeEnumeration/>
+                <Units/>
+                <Description>Location information of the broadcast system.</Description>
+            </Item>
+            <Item ID="4">
+                <Name>carrier-info</Name>
+                <Operations>RW</Operations>
+                <MultipleInstances>Single</MultipleInstances>
+                <Type>String</Type>
+                <RangeEnumeration/>
+                <Units/>
+                <Description>Carrier information of the broadcast system.</Description>
+            </Item>
+            <Item ID="5">
+                <Name>auto-program</Name>
+                <Operations>RW</Operations>
+                <MultipleInstances>Single</MultipleInstances>
+                <Type>Boolean</Type>
+                <RangeEnumeration/>
+                <Units/>
+                <Description>Scan for channels using Auto Program.</Description>
+            </Item>
+        </Resources>
+    </Object>
+</LWM2M>

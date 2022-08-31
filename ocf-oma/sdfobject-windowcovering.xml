@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Copyright 2018-2019 Open Connectivity Foundation, Inc. All rights reserved.
+BSD-3-Clause
+-->
+<LWM2M xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://openmobilealliance.org/tech/profiles/LWM2M.xsd">
+    <Object ObjectType="MODefinition">
+        <Name>windowcovering</Name>
+        <Description1>This Resource describes the information of a window covering, i. e. , type, configuration status, and mode. Velocity associated with lifting the window covering can be changed by updating Lift_Velocity(cm/sec). Ramp up/down times to reaching the velocity setting can be changed by updating Lift_Acceleration Time/Lift_Deceleration Time (0. 1sec).</Description1>
+        <ObjectID>65535</ObjectID>
+        <ObjectURN>urn:oma:lwm2m:ext:65535</ObjectURN>
+        <LWM2MVersion>1.0</LWM2MVersion>
+        <ObjectVersion>1.0</ObjectVersion>
+        <MultipleInstances>Multiple</MultipleInstances>
+        <Mandatory>Optional</Mandatory>
+        <Resources>
+            <Item ID="1">
+                <Name>windowcoveringtype</Name>
+                <Operations>R</Operations>
+                <MultipleInstances>Single</MultipleInstances>
+                <Mandatory>Optional</Mandatory>
+                <Type>String</Type>
+                <RangeEnumeration/>
+                <Units/>
+                <Description>Window covering type. See OCF enumeration map for set of valid values.</Description>
+            </Item>
+            <Item ID="2">
+                <Name>liftvelocity</Name>
+                <Operations>RW</Operations>
+                <MultipleInstances>Single</MultipleInstances>
+                <Mandatory>Optional</Mandatory>
+                <Type>Integer</Type>
+                <RangeEnumeration/>
+                <Units/>
+                <Description>Velocity in cm/sec associated with lifting the covering</Description>
+            </Item>
+            <Item ID="3">
+                <Name>configstatus</Name>
+                <Operations>R</Operations>
+                <MultipleInstances>Single</MultipleInstances>
+                <Mandatory>Optional</Mandatory>
+                <Type>unknown (object)</Type>
+                <RangeEnumeration/>
+                <Units/>
+                <Description>Set of config status indicators.</Description>
+            </Item>
+            <Item ID="4">
+                <Name>liftaccelerationtime</Name>
+                <Operations>RW</Operations>
+                <MultipleInstances>Single</MultipleInstances>
+                <Mandatory>Optional</Mandatory>
+                <Type>Integer</Type>
+                <RangeEnumeration/>
+                <Units/>
+                <Description>Ramp up time to reach lift velocity (ms)</Description>
+            </Item>
+            <Item ID="5">
+                <Name>liftdecelerationtime</Name>
+                <Operations>RW</Operations>
+                <MultipleInstances>Single</MultipleInstances>
+                <Mandatory>Optional</Mandatory>
+                <Type>Integer</Type>
+                <RangeEnumeration/>
+                <Units/>
+                <Description>Ramp down time from the velocity setting (ms)</Description>
+            </Item>
+            <Item ID="6">
+                <Name>mode</Name>
+                <Operations>RW</Operations>
+                <MultipleInstances>Single</MultipleInstances>
+                <Mandatory>Mandatory</Mandatory>
+                <Type>unknown (object)</Type>
+                <RangeEnumeration/>
+                <Units/>
+                <Description>Set of operational modes.</Description>
+            </Item>
+        </Resources>
+    </Object>
+</LWM2M>

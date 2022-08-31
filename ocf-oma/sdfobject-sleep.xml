@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Copyright 2018-2019 Open Connectivity Foundation, Inc. All rights reserved.
+BSD-3-Clause
+-->
+<LWM2M xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://openmobilealliance.org/tech/profiles/LWM2M.xsd">
+    <Object ObjectType="MODefinition">
+        <Name>sleep</Name>
+        <Description1>This Resource describes the Properties associated with Sleep. Sleep shows the time spent in each of the sleep stages (awake, nrem1, nrem2, nrem3, nrem4, rem, light sleep, deep sleep), along with a sleep score indicating the quality of sleep.</Description1>
+        <ObjectID>65535</ObjectID>
+        <ObjectURN>urn:oma:lwm2m:ext:65535</ObjectURN>
+        <LWM2MVersion>1.0</LWM2MVersion>
+        <ObjectVersion>1.0</ObjectVersion>
+        <MultipleInstances>Multiple</MultipleInstances>
+        <Mandatory>Optional</Mandatory>
+        <Resources>
+            <Item ID="1">
+                <Name>awake</Name>
+                <Operations>R</Operations>
+                <MultipleInstances>Single</MultipleInstances>
+                <Mandatory>Mandatory</Mandatory>
+                <Type>Unsigned Integer</Type>
+                <RangeEnumeration/>
+                <Units/>
+                <Description>Time spent in Awake stage (in seconds)</Description>
+            </Item>
+            <Item ID="2">
+                <Name>nrem1</Name>
+                <Operations>R</Operations>
+                <MultipleInstances>Single</MultipleInstances>
+                <Mandatory>Mandatory</Mandatory>
+                <Type>Unsigned Integer</Type>
+                <RangeEnumeration/>
+                <Units/>
+                <Description>Time spent in Non Rapid Eye Movement stage 1 (in seconds)</Description>
+            </Item>
+            <Item ID="3">
+                <Name>nrem2</Name>
+                <Operations>R</Operations>
+                <MultipleInstances>Single</MultipleInstances>
+                <Mandatory>Mandatory</Mandatory>
+                <Type>Unsigned Integer</Type>
+                <RangeEnumeration/>
+                <Units/>
+                <Description>Time spent in Non Rapid Eye Movement stage 2 (in seconds)</Description>
+            </Item>
+            <Item ID="4">
+                <Name>nrem3</Name>
+                <Operations>R</Operations>
+                <MultipleInstances>Single</MultipleInstances>
+                <Mandatory>Mandatory</Mandatory>
+                <Type>Unsigned Integer</Type>
+                <RangeEnumeration/>
+                <Units/>
+                <Description>Time spent in Non Rapid Eye Movement stage 3 (in seconds)</Description>
+            </Item>
+            <Item ID="5">
+                <Name>nrem4</Name>
+                <Operations>R</Operations>
+                <MultipleInstances>Single</MultipleInstances>
+                <Mandatory>Optional</Mandatory>
+                <Type>Unsigned Integer</Type>
+                <RangeEnumeration/>
+                <Units/>
+                <Description>Time spent in Non Rapid Eye Movement stage 4 (in seconds)</Description>
+            </Item>
+            <Item ID="6">
+                <Name>rem</Name>
+                <Operations>R</Operations>
+                <MultipleInstances>Single</MultipleInstances>
+                <Mandatory>Mandatory</Mandatory>
+                <Type>Unsigned Integer</Type>
+                <RangeEnumeration/>
+                <Units/>
+                <Description>Time spent in Rapid Eye Movement (in seconds)</Description>
+            </Item>
+            <Item ID="7">
+                <Name>lightsleep</Name>
+                <Operations>R</Operations>
+                <MultipleInstances>Single</MultipleInstances>
+                <Mandatory>Optional</Mandatory>
+                <Type>Unsigned Integer</Type>
+                <RangeEnumeration/>
+                <Units/>
+                <Description>Time spent in Light Sleep stage, consisting in NREM stages 1 and 2 (in seconds)</Description>
+            </Item>
+            <Item ID="8">
+                <Name>deepsleep</Name>
+                <Operations>R</Operations>
+                <MultipleInstances>Single</MultipleInstances>
+                <Mandatory>Optional</Mandatory>
+                <Type>Unsigned Integer</Type>
+                <RangeEnumeration/>
+                <Units/>
+                <Description>Time spent in Deep Sleep stage, consisting in NREM stages 3 and 4 (in seconds)</Description>
+            </Item>
+            <Item ID="9">
+                <Name>sleepscore</Name>
+                <Operations>R</Operations>
+                <MultipleInstances>Single</MultipleInstances>
+                <Mandatory>Optional</Mandatory>
+                <Type>Float</Type>
+                <RangeEnumeration/>
+                <Units/>
+                <Description>Score computed from the time spent in each sleep stage, indicative of the quality of sleep</Description>
+            </Item>
+            <Item ID="10">
+                <Name>range phases</Name>
+                <Operations>R</Operations>
+                <MultipleInstances>Multiple</MultipleInstances>
+                <Mandatory>Optional</Mandatory>
+                <Type>Integer</Type>
+                <RangeEnumeration/>
+                <Units/>
+                <Description>The valid range for the Property in the Resource as an integer. The first value in the array is the minimum value, the second value in the array is the maximum value.</Description>
+            </Item>
+            <Item ID="11">
+                <Name>step phases</Name>
+                <Operations>R</Operations>
+                <MultipleInstances>Single</MultipleInstances>
+                <Mandatory>Optional</Mandatory>
+                <Type>Integer</Type>
+                <RangeEnumeration/>
+                <Units/>
+                <Description>Step value across the defined range when the range is an integer.  This is the increment for valid values across the range; so if range is 0..10 and step is 2 then valid values are 0,2,4,6,8,10.</Description>
+            </Item>
+            <Item ID="12">
+                <Name>range score</Name>
+                <Operations>R</Operations>
+                <MultipleInstances>Multiple</MultipleInstances>
+                <Mandatory>Optional</Mandatory>
+                <Type>Float</Type>
+                <RangeEnumeration/>
+                <Units/>
+                <Description>The valid range for the Property in the Resource as a number. The first value in the array is the minimum value, the second value in the array is the maximum value.</Description>
+            </Item>
+            <Item ID="13">
+                <Name>step score</Name>
+                <Operations>R</Operations>
+                <MultipleInstances>Single</MultipleInstances>
+                <Mandatory>Optional</Mandatory>
+                <Type>Float</Type>
+                <RangeEnumeration/>
+                <Units/>
+                <Description>Step value across the defined range an integer when the range is a number.  This is the increment for valid values across the range; so if range is 0.0..10.0 and step is 2.5 then valid values are 0.0,2.5,5.0,7.5,10.0.</Description>
+            </Item>
+            <Item ID="14">
+                <Name>precision</Name>
+                <Operations>R</Operations>
+                <MultipleInstances>Single</MultipleInstances>
+                <Mandatory>Optional</Mandatory>
+                <Type>Float</Type>
+                <RangeEnumeration/>
+                <Units/>
+                <Description>When exposed the value in 'precision' provides a +/- tolerance against the Properties in the Resource. Thus if a Property is UPDATED to a value and that Property then RETRIEVED, the RETRIEVED value is valid if in the range of the set value +/- precision</Description>
+            </Item>
+        </Resources>
+    </Object>
+</LWM2M>

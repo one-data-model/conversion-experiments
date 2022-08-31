@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Copyright 2020 Open Connectivity Foundation, Inc. All rights reserved.
+BSD-3-Clause
+-->
+<LWM2M xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://openmobilealliance.org/tech/profiles/LWM2M.xsd">
+    <Object ObjectType="MODefinition">
+        <Name>settings.picture</Name>
+        <Description1>Gets current device picture settings.</Description1>
+        <ObjectID>65535</ObjectID>
+        <ObjectURN>urn:oma:lwm2m:ext:65535</ObjectURN>
+        <LWM2MVersion>1.0</LWM2MVersion>
+        <ObjectVersion>1.0</ObjectVersion>
+        <MultipleInstances>Multiple</MultipleInstances>
+        <Mandatory>Optional</Mandatory>
+        <Resources>
+            <Item ID="1">
+                <Name>picture-mode</Name>
+                <Operations>RW</Operations>
+                <MultipleInstances>Single</MultipleInstances>
+                <Type>String</Type>
+                <RangeEnumeration/>
+                <Units/>
+                <Description>Device Settings Picture Mode. Client can change picture-mode using supported-picture-modes property.</Description>
+            </Item>
+            <Item ID="2">
+                <Name>supported-picture-modes</Name>
+                <Operations>R</Operations>
+                <MultipleInstances>Multiple</MultipleInstances>
+                <Type>String</Type>
+                <RangeEnumeration/>
+                <Units/>
+                <Description>An array of possible picture modes the device supports. This property should be added if picture-mode property is supported.</Description>
+            </Item>
+            <Item ID="3">
+                <Name>backlight</Name>
+                <Operations>RW</Operations>
+                <MultipleInstances>Single</MultipleInstances>
+                <Type>Unsigned Integer</Type>
+                <RangeEnumeration>0..10</RangeEnumeration>
+                <Units/>
+                <Description>Quantized representation in the range 0-10 of the current sensed or set value for Device Settings Picture Backlight.</Description>
+            </Item>
+            <Item ID="4">
+                <Name>contrast</Name>
+                <Operations>RW</Operations>
+                <MultipleInstances>Single</MultipleInstances>
+                <Type>Unsigned Integer</Type>
+                <RangeEnumeration>0..100</RangeEnumeration>
+                <Units/>
+                <Description>Quantized representation in the range 0-100 of the current sensed or set value for Device Settings Picture Contrast.</Description>
+            </Item>
+            <Item ID="5">
+                <Name>brightness</Name>
+                <Operations>RW</Operations>
+                <MultipleInstances>Single</MultipleInstances>
+                <Type>Unsigned Integer</Type>
+                <RangeEnumeration>0..100</RangeEnumeration>
+                <Units/>
+                <Description>Quantized representation in the range 0-100 of the current sensed or set value for Device Settings Picture Brightness.</Description>
+            </Item>
+            <Item ID="6">
+                <Name>sharpness</Name>
+                <Operations>RW</Operations>
+                <MultipleInstances>Single</MultipleInstances>
+                <Type>Unsigned Integer</Type>
+                <RangeEnumeration>0..100</RangeEnumeration>
+                <Units/>
+                <Description>Quantized representation in the range 0-100 of the current sensed or set value for Device Settings Picture Sharpness.</Description>
+            </Item>
+            <Item ID="7">
+                <Name>colour</Name>
+                <Operations>RW</Operations>
+                <MultipleInstances>Single</MultipleInstances>
+                <Type>Unsigned Integer</Type>
+                <RangeEnumeration>0..100</RangeEnumeration>
+                <Units/>
+                <Description>Quantized representation in the range 0-100 of the current sensed or set value for Device Settings Picture Colour.</Description>
+            </Item>
+            <Item ID="8">
+                <Name>colour-temperature</Name>
+                <Operations>RW</Operations>
+                <MultipleInstances>Single</MultipleInstances>
+                <Type>Integer</Type>
+                <RangeEnumeration>-50..50</RangeEnumeration>
+                <Units/>
+                <Description>Colour temperature range of -50 (Cool) to 50 (Warm).</Description>
+            </Item>
+            <Item ID="9">
+                <Name>tint</Name>
+                <Operations>RW</Operations>
+                <MultipleInstances>Single</MultipleInstances>
+                <Type>Unsigned Integer</Type>
+                <RangeEnumeration>0..100</RangeEnumeration>
+                <Units/>
+                <Description>Quantized representation in the range 0-100 of the current sensed or set value for Device Settings Picture Tint. The closer to 100, the more saturated the red colour becomes. The closer to 0, the more saturated the green colour becomes.</Description>
+            </Item>
+            <Item ID="10">
+                <Name>picture-reset</Name>
+                <Operations>RW</Operations>
+                <MultipleInstances>Single</MultipleInstances>
+                <Type>Boolean</Type>
+                <RangeEnumeration/>
+                <Units/>
+                <Description>Resets all picture settings to the default values.</Description>
+            </Item>
+            <Item ID="11">
+                <Name>picture-off</Name>
+                <Operations>RW</Operations>
+                <MultipleInstances>Single</MultipleInstances>
+                <Type>Boolean</Type>
+                <RangeEnumeration/>
+                <Units/>
+                <Description>This turns picture on and off.</Description>
+            </Item>
+            <Item ID="12">
+                <Name>aspect-ratio</Name>
+                <Operations>RW</Operations>
+                <MultipleInstances>Single</MultipleInstances>
+                <Type>String</Type>
+                <RangeEnumeration/>
+                <Units/>
+                <Description>Device Settings Aspect Ratio. Client can change aspect-ratio using supported-aspect-ratio property.</Description>
+            </Item>
+            <Item ID="13">
+                <Name>supported-aspect-ratio</Name>
+                <Operations>R</Operations>
+                <MultipleInstances>Multiple</MultipleInstances>
+                <Type>String</Type>
+                <RangeEnumeration/>
+                <Units/>
+                <Description>An array of possible aspect ratio the device supports. This property should be added if aspect-ratio property is supported.</Description>
+            </Item>
+        </Resources>
+    </Object>
+</LWM2M>

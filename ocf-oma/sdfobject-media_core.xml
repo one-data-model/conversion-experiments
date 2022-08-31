@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Copyright 2020-21 Open Connectivity Foundation, Inc. All rights reserved.
+BSD-3-Clause
+-->
+<LWM2M xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://openmobilealliance.org/tech/profiles/LWM2M.xsd">
+    <Object ObjectType="MODefinition">
+        <Name>media.core</Name>
+        <Description1>This Resource specifies the Properties associated with all media types that a Device may support.</Description1>
+        <ObjectID>65535</ObjectID>
+        <ObjectURN>urn:oma:lwm2m:ext:65535</ObjectURN>
+        <LWM2MVersion>1.0</LWM2MVersion>
+        <ObjectVersion>1.0</ObjectVersion>
+        <MultipleInstances>Multiple</MultipleInstances>
+        <Mandatory>Optional</Mandatory>
+        <Resources>
+            <Item ID="1">
+                <Name>title</Name>
+                <Operations>RW</Operations>
+                <MultipleInstances>Single</MultipleInstances>
+                <Type>String</Type>
+                <RangeEnumeration/>
+                <Units/>
+                <Description>Specifies the Short user-friendly name of the media.</Description>
+            </Item>
+            <Item ID="2">
+                <Name>shortdescription</Name>
+                <Operations>RW</Operations>
+                <MultipleInstances>Single</MultipleInstances>
+                <Type>String</Type>
+                <RangeEnumeration/>
+                <Units/>
+                <Description>Specifies a short description that is associated with the media (e.g. a tag line).</Description>
+            </Item>
+            <Item ID="3">
+                <Name>description</Name>
+                <Operations>RW</Operations>
+                <MultipleInstances>Single</MultipleInstances>
+                <Type>String</Type>
+                <RangeEnumeration/>
+                <Units/>
+                <Description>Specifies the Long user-friendly synopsis of the media content.</Description>
+            </Item>
+            <Item ID="4">
+                <Name>mimetype</Name>
+                <Operations>RW</Operations>
+                <MultipleInstances>Single</MultipleInstances>
+                <Type>String</Type>
+                <RangeEnumeration/>
+                <Units/>
+                <Description>Specifies the Mime Type for the media content.</Description>
+            </Item>
+            <Item ID="5">
+                <Name>mediafile</Name>
+                <Operations>RW</Operations>
+                <MultipleInstances>Single</MultipleInstances>
+                <Type>String</Type>
+                <RangeEnumeration/>
+                <Units/>
+                <Description>uri of the Media File for media content. It can be specified as a Relative Reference or fully-qualified URI.</Description>
+            </Item>
+            <Item ID="6">
+                <Name>genres</Name>
+                <Operations>RW</Operations>
+                <MultipleInstances>Multiple</MultipleInstances>
+                <Type>unknown (object)</Type>
+                <RangeEnumeration/>
+                <Units/>
+                <Description>Genres for media content.</Description>
+            </Item>
+            <Item ID="7">
+                <Name>ratinginfo</Name>
+                <Operations>RW</Operations>
+                <MultipleInstances>Multiple</MultipleInstances>
+                <Type>unknown (object)</Type>
+                <RangeEnumeration/>
+                <Units/>
+                <Description>The rating information which includes the rating organization and rating.</Description>
+            </Item>
+            <Item ID="8">
+                <Name>identificationnumber</Name>
+                <Operations>RW</Operations>
+                <MultipleInstances>Single</MultipleInstances>
+                <Type>String</Type>
+                <RangeEnumeration/>
+                <Units/>
+                <Description>Unique identification number for media content (ISSN: International_Standard_Serial_Number)</Description>
+            </Item>
+            <Item ID="9">
+                <Name>datetime</Name>
+                <Operations>RW</Operations>
+                <MultipleInstances>Single</MultipleInstances>
+                <Type>String</Type>
+                <RangeEnumeration/>
+                <Units/>
+                <Description>This is date, time, and timezone of the media content was created using RFC3339 date-time format. (e.g: '2018-06-23T20:22:59Z' - Date+Time+Timezone'UTC' or '2018-06-23T20:22:59-08:00' - Date+Time+Timezone'PST')</Description>
+            </Item>
+            <Item ID="10">
+                <Name>mediaartwork</Name>
+                <Operations>RW</Operations>
+                <MultipleInstances>Multiple</MultipleInstances>
+                <Type>unknown (object)</Type>
+                <RangeEnumeration/>
+                <Units/>
+                <Description>The array of icons that are used as the media artwork.</Description>
+            </Item>
+            <Item ID="11">
+                <Name>copyright</Name>
+                <Operations>R</Operations>
+                <MultipleInstances>Single</MultipleInstances>
+                <Type>String</Type>
+                <RangeEnumeration/>
+                <Units/>
+                <Description>Copyright notice by the copyright holder.</Description>
+            </Item>
+        </Resources>
+    </Object>
+</LWM2M>

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+copyright 2016-2017, 2019 Open Connectivity Foundation, Inc. All rights reserved.
+BSD-3-Clause
+-->
+<LWM2M xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://openmobilealliance.org/tech/profiles/LWM2M.xsd">
+    <Object ObjectType="MODefinition">
+        <Name>airflow</Name>
+        <Description1>This Resource describes Properties associated with air flow. The Property "supporteddirections" is the set of valid values for the direction property for a particular instance of this Resource Type. The Property "direction" is the directionality of the air flow if applicable, if Property "supporteddirections" is also present it must be a value from that set. The values of Property "direction" are dependent on the capabilities of the unit. The Property "speed" is an integer representing the current speed level for the unit. The Property "range" is an array of the min,max values for the speed level. If not present the "range" defaults to [0,100]. Property "automode" is the status of the automode feature; Off means automode is not enabled, On means automode is active and the speed is automatically controlled by the Device.</Description1>
+        <ObjectID>65535</ObjectID>
+        <ObjectURN>urn:oma:lwm2m:ext:65535</ObjectURN>
+        <LWM2MVersion>1.0</LWM2MVersion>
+        <ObjectVersion>1.0</ObjectVersion>
+        <MultipleInstances>Multiple</MultipleInstances>
+        <Mandatory>Optional</Mandatory>
+        <Resources>
+            <Item ID="1">
+                <Name>speed</Name>
+                <Operations>RW</Operations>
+                <MultipleInstances>Single</MultipleInstances>
+                <Mandatory>Mandatory</Mandatory>
+                <Type>Integer</Type>
+                <RangeEnumeration/>
+                <Units/>
+                <Description>The current speed level.</Description>
+            </Item>
+            <Item ID="2">
+                <Name>direction</Name>
+                <Operations>RW</Operations>
+                <MultipleInstances>Single</MultipleInstances>
+                <Mandatory>Optional</Mandatory>
+                <Type>String</Type>
+                <RangeEnumeration/>
+                <Units/>
+                <Description>The directionality of the air flow, a value indicated by "supporteddirections".</Description>
+            </Item>
+            <Item ID="3">
+                <Name>automode</Name>
+                <Operations>RW</Operations>
+                <MultipleInstances>Single</MultipleInstances>
+                <Mandatory>Optional</Mandatory>
+                <Type>String</Type>
+                <RangeEnumeration/>
+                <Units/>
+                <Description>The status of the automode feature, if on speed is set by the Device.</Description>
+            </Item>
+            <Item ID="4">
+                <Name>supporteddirections</Name>
+                <Operations>R</Operations>
+                <MultipleInstances>Multiple</MultipleInstances>
+                <Mandatory>Optional</Mandatory>
+                <Type>String</Type>
+                <RangeEnumeration/>
+                <Units/>
+                <Description>The array of possible direction settings for this instance of the Resource Type.</Description>
+            </Item>
+            <Item ID="5">
+                <Name>range</Name>
+                <Operations>R</Operations>
+                <MultipleInstances>Multiple</MultipleInstances>
+                <Mandatory>Optional</Mandatory>
+                <Type>Integer</Type>
+                <RangeEnumeration/>
+                <Units/>
+                <Description>The valid range for the Property in the Resource as an integer. The first value in the array is the minimum value, the second value in the array is the maximum value.</Description>
+            </Item>
+            <Item ID="6">
+                <Name>step</Name>
+                <Operations>R</Operations>
+                <MultipleInstances>Single</MultipleInstances>
+                <Mandatory>Optional</Mandatory>
+                <Type>Integer</Type>
+                <RangeEnumeration/>
+                <Units/>
+                <Description>Step value across the defined range when the range is an integer.  This is the increment for valid values across the range; so if range is 0..10 and step is 2 then valid values are 0,2,4,6,8,10.</Description>
+            </Item>
+        </Resources>
+    </Object>
+</LWM2M>

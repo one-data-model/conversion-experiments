@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+copyright 2016-2017, 2019 Open Connectivity Foundation, Inc. All rights reserved.
+BSD-3-Clause
+-->
+<LWM2M xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://openmobilealliance.org/tech/profiles/LWM2M.xsd">
+    <Object ObjectType="MODefinition">
+        <Name>ptz</Name>
+        <Description1>This Resource specifies the pan tilt and zoom capabilities of a device. The Resource Type is dynamic and reflects whether the values apply to physical movement of the device or digital/virtual enhancements to the image. For physical movement the Resource Type is "oic. r. movement. ptz". For digital/virtual image enhancements the Resource Type is "oic. r. image. ptz". The Properties "pan" and "tilt" are specified in degrees. The Property "zoomFactor" is a value in the range 1-100 for linear (optical) zoom. The zoom factor is a value in the range [1x, 2x, 4x, 8x, 16x, 32x] for digital zoom. If there is no zoom value to set the zoom factor shall be '1x'. The value 0 degrees means neutral, this is a vendor defined setting. Note that this resource also can be used to create an offset for physical movement. When that is the case, the Resource Type value is: "oic. r. movement. offset. ptz" Note that this resource also can be used to create an offset for image movement. When that is the case, the Resource Type value is: "oic. r. image. offset. ptz". When the Property "pan_range" value is omitted, then the range is [-180. 0,180. 0]. If "pan" is not supported then the range shall be [0. 0,0. 0] When the Property "tilt_range" value is omitted, then the range is [-180. 0,180. 0]. If "tilt" is not supported then the range shall be [0. 0,0. 0].</Description1>
+        <ObjectID>65535</ObjectID>
+        <ObjectURN>urn:oma:lwm2m:ext:65535</ObjectURN>
+        <LWM2MVersion>1.0</LWM2MVersion>
+        <ObjectVersion>1.0</ObjectVersion>
+        <MultipleInstances>Multiple</MultipleInstances>
+        <Mandatory>Optional</Mandatory>
+        <Resources>
+            <Item ID="1">
+                <Name>tilt range</Name>
+                <Operations>R</Operations>
+                <MultipleInstances>Multiple</MultipleInstances>
+                <Mandatory>Optional</Mandatory>
+                <Type>Float</Type>
+                <RangeEnumeration/>
+                <Units/>
+                <Description>The valid range for the Property in the Resource as a number. The first value in the array is the minimum value, the second value in the array is the maximum value.</Description>
+            </Item>
+            <Item ID="2">
+                <Name>zoomFactor</Name>
+                <Operations>RW</Operations>
+                <MultipleInstances>Single</MultipleInstances>
+                <Mandatory>Mandatory</Mandatory>
+                <Type>String</Type>
+                <RangeEnumeration/>
+                <Units/>
+                <Description>The zoom factor value.</Description>
+            </Item>
+            <Item ID="3">
+                <Name>tilt</Name>
+                <Operations>RW</Operations>
+                <MultipleInstances>Single</MultipleInstances>
+                <Mandatory>Mandatory</Mandatory>
+                <Type>Float</Type>
+                <RangeEnumeration/>
+                <Units/>
+                <Description>The vertical tilt in degrees.</Description>
+            </Item>
+            <Item ID="4">
+                <Name>precision</Name>
+                <Operations>R</Operations>
+                <MultipleInstances>Single</MultipleInstances>
+                <Mandatory>Optional</Mandatory>
+                <Type>Float</Type>
+                <RangeEnumeration/>
+                <Units/>
+                <Description>When exposed the value in 'precision' provides a +/- tolerance against the Properties in the Resource. Thus if a Property is UPDATED to a value and that Property then RETRIEVED, the RETRIEVED value is valid if in the range of the set value +/- precision</Description>
+            </Item>
+            <Item ID="5">
+                <Name>pan range</Name>
+                <Operations>R</Operations>
+                <MultipleInstances>Multiple</MultipleInstances>
+                <Mandatory>Optional</Mandatory>
+                <Type>Float</Type>
+                <RangeEnumeration/>
+                <Units/>
+                <Description>The valid range for the Property in the Resource as a number. The first value in the array is the minimum value, the second value in the array is the maximum value.</Description>
+            </Item>
+            <Item ID="6">
+                <Name>zoomFactorRange</Name>
+                <Operations>R</Operations>
+                <MultipleInstances>Single</MultipleInstances>
+                <Mandatory>Optional</Mandatory>
+                <Type>String</Type>
+                <RangeEnumeration/>
+                <Units/>
+                <Description>The allowed Zoom Factor values. Linear equates to a 1-100 min/max.</Description>
+            </Item>
+            <Item ID="7">
+                <Name>pan</Name>
+                <Operations>RW</Operations>
+                <MultipleInstances>Single</MultipleInstances>
+                <Mandatory>Mandatory</Mandatory>
+                <Type>Float</Type>
+                <RangeEnumeration/>
+                <Units/>
+                <Description>The horizontal pan in degrees.</Description>
+            </Item>
+        </Resources>
+    </Object>
+</LWM2M>

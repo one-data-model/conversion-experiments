@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+copyright 2016-2017, 2019 Open Connectivity Foundation, Inc. All rights reserved.
+BSD-3-Clause
+-->
+<LWM2M xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://openmobilealliance.org/tech/profiles/LWM2M.xsd">
+    <Object ObjectType="MODefinition">
+        <Name>sensor.geolocation</Name>
+        <Description1>This Resource describes the properties associated with the current geolocation coordinate. Geolocation is a geolocation coordinate data. The Property "latitude" is a device's current Latitude coordinate (degrees). The Property "longitude" is a device's current Longitude coordinate (degrees). The Property "alt" is a device's current distance (metres) above or below 'local' sea-level. The Property "accuracy" is the accuracy level of the latitude and longitude coordinates (metres). The Property "altitudeAccuracy" is the accuracy level of the altitude coordinates (metres). The Property "heading" is a direction of travel of device (degree). The Property "speed" is a device's current velocity (metres per second).</Description1>
+        <ObjectID>65535</ObjectID>
+        <ObjectURN>urn:oma:lwm2m:ext:65535</ObjectURN>
+        <LWM2MVersion>1.0</LWM2MVersion>
+        <ObjectVersion>1.0</ObjectVersion>
+        <MultipleInstances>Multiple</MultipleInstances>
+        <Mandatory>Optional</Mandatory>
+        <Resources>
+            <Item ID="1">
+                <Name>longitude</Name>
+                <Operations>R</Operations>
+                <MultipleInstances>Single</MultipleInstances>
+                <Mandatory>Mandatory</Mandatory>
+                <Type>Float</Type>
+                <RangeEnumeration/>
+                <Units/>
+                <Description>The Device's Current Longitude coordinate (degrees).</Description>
+            </Item>
+            <Item ID="2">
+                <Name>heading</Name>
+                <Operations>R</Operations>
+                <MultipleInstances>Single</MultipleInstances>
+                <Mandatory>Optional</Mandatory>
+                <Type>Float</Type>
+                <RangeEnumeration>0..360</RangeEnumeration>
+                <Units/>
+                <Description>The direction of travel of the Device (degree).</Description>
+            </Item>
+            <Item ID="3">
+                <Name>latitude</Name>
+                <Operations>R</Operations>
+                <MultipleInstances>Single</MultipleInstances>
+                <Mandatory>Mandatory</Mandatory>
+                <Type>Float</Type>
+                <RangeEnumeration/>
+                <Units/>
+                <Description>The Device's Current Latitude coordinate (degrees).</Description>
+            </Item>
+            <Item ID="4">
+                <Name>altitudeAccuracy</Name>
+                <Operations>R</Operations>
+                <MultipleInstances>Single</MultipleInstances>
+                <Mandatory>Optional</Mandatory>
+                <Type>Float</Type>
+                <RangeEnumeration/>
+                <Units/>
+                <Description>The accuracy level of the altitude coordinates (metres).</Description>
+            </Item>
+            <Item ID="5">
+                <Name>alt</Name>
+                <Operations>R</Operations>
+                <MultipleInstances>Single</MultipleInstances>
+                <Mandatory>Mandatory</Mandatory>
+                <Type>Float</Type>
+                <RangeEnumeration/>
+                <Units/>
+                <Description>The current distance (metres) above or below 'local' sea-level.</Description>
+            </Item>
+            <Item ID="6">
+                <Name>accuracy</Name>
+                <Operations>R</Operations>
+                <MultipleInstances>Single</MultipleInstances>
+                <Mandatory>Optional</Mandatory>
+                <Type>Float</Type>
+                <RangeEnumeration/>
+                <Units/>
+                <Description>The accuracy level of the latitude and longitude coordinates (metres).</Description>
+            </Item>
+            <Item ID="7">
+                <Name>speed</Name>
+                <Operations>R</Operations>
+                <MultipleInstances>Single</MultipleInstances>
+                <Mandatory>Optional</Mandatory>
+                <Type>Float</Type>
+                <RangeEnumeration/>
+                <Units/>
+                <Description>The Device's current velocity (metres per second).</Description>
+            </Item>
+        </Resources>
+    </Object>
+</LWM2M>

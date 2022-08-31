@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Copyright 2019 Open Connectivity Foundation, Inc. All rights reserved.
+BSD-3-Clause
+-->
+<LWM2M xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://openmobilealliance.org/tech/profiles/LWM2M.xsd">
+    <Object ObjectType="MODefinition">
+        <Name>media.video</Name>
+        <Description1>This OCF Resource specifies the video media types that an OCF Device supports.</Description1>
+        <ObjectID>65535</ObjectID>
+        <ObjectURN>urn:oma:lwm2m:ext:65535</ObjectURN>
+        <LWM2MVersion>1.0</LWM2MVersion>
+        <ObjectVersion>1.0</ObjectVersion>
+        <MultipleInstances>Multiple</MultipleInstances>
+        <Mandatory>Optional</Mandatory>
+        <Resources>
+            <Item ID="1">
+                <Name>mediacore</Name>
+                <Operations>RW</Operations>
+                <MultipleInstances>Single</MultipleInstances>
+                <Mandatory>Mandatory</Mandatory>
+                <Type>unknown (object)</Type>
+                <RangeEnumeration/>
+                <Units/>
+                <Description>The Media Core Properties common on all Media Resource Types,</Description>
+            </Item>
+            <Item ID="2">
+                <Name>series</Name>
+                <Operations>RW</Operations>
+                <MultipleInstances>Multiple</MultipleInstances>
+                <Mandatory>Optional</Mandatory>
+                <Type>String</Type>
+                <RangeEnumeration/>
+                <Units/>
+                <Description>List of TV Series and episode</Description>
+            </Item>
+            <Item ID="3">
+                <Name>studio</Name>
+                <Operations>RW</Operations>
+                <MultipleInstances>Multiple</MultipleInstances>
+                <Mandatory>Optional</Mandatory>
+                <Type>String</Type>
+                <RangeEnumeration/>
+                <Units/>
+                <Description>List of studios that produced the movie</Description>
+            </Item>
+            <Item ID="4">
+                <Name>cast</Name>
+                <Operations>RW</Operations>
+                <MultipleInstances>Multiple</MultipleInstances>
+                <Mandatory>Optional</Mandatory>
+                <Type>String</Type>
+                <RangeEnumeration/>
+                <Units/>
+                <Description>List of casts that acted in the movie</Description>
+            </Item>
+            <Item ID="5">
+                <Name>directors</Name>
+                <Operations>RW</Operations>
+                <MultipleInstances>Multiple</MultipleInstances>
+                <Mandatory>Optional</Mandatory>
+                <Type>String</Type>
+                <RangeEnumeration/>
+                <Units/>
+                <Description>List of directors that directed the movie</Description>
+            </Item>
+            <Item ID="6">
+                <Name>producers</Name>
+                <Operations>RW</Operations>
+                <MultipleInstances>Multiple</MultipleInstances>
+                <Mandatory>Optional</Mandatory>
+                <Type>String</Type>
+                <RangeEnumeration/>
+                <Units/>
+                <Description>List of producers that produced the movie</Description>
+            </Item>
+            <Item ID="7">
+                <Name>writers</Name>
+                <Operations>RW</Operations>
+                <MultipleInstances>Multiple</MultipleInstances>
+                <Mandatory>Optional</Mandatory>
+                <Type>String</Type>
+                <RangeEnumeration/>
+                <Units/>
+                <Description>List of writers that wrote the movie</Description>
+            </Item>
+            <Item ID="8">
+                <Name>composers</Name>
+                <Operations>RW</Operations>
+                <MultipleInstances>Multiple</MultipleInstances>
+                <Mandatory>Optional</Mandatory>
+                <Type>String</Type>
+                <RangeEnumeration/>
+                <Units/>
+                <Description>List of composers that wrote the music</Description>
+            </Item>
+            <Item ID="9">
+                <Name>sdp</Name>
+                <Operations>RW</Operations>
+                <MultipleInstances>Multiple</MultipleInstances>
+                <Mandatory>Optional</Mandatory>
+                <Type>String</Type>
+                <RangeEnumeration/>
+                <Units/>
+                <Description>Array of strings, a string for each Session Description Protocol syntax.</Description>
+            </Item>
+            <Item ID="10">
+                <Name>width</Name>
+                <Operations>RW</Operations>
+                <MultipleInstances>Single</MultipleInstances>
+                <Mandatory>Optional</Mandatory>
+                <Type>Integer</Type>
+                <RangeEnumeration/>
+                <Units/>
+                <Description>The width of the video</Description>
+            </Item>
+            <Item ID="11">
+                <Name>height</Name>
+                <Operations>RW</Operations>
+                <MultipleInstances>Single</MultipleInstances>
+                <Mandatory>Optional</Mandatory>
+                <Type>Integer</Type>
+                <RangeEnumeration/>
+                <Units/>
+                <Description>The height of the video</Description>
+            </Item>
+            <Item ID="12">
+                <Name>resolution</Name>
+                <Operations>RW</Operations>
+                <MultipleInstances>Single</MultipleInstances>
+                <Mandatory>Optional</Mandatory>
+                <Type>Integer</Type>
+                <RangeEnumeration/>
+                <Units/>
+                <Description>The resolution of the video in pixels</Description>
+            </Item>
+            <Item ID="13">
+                <Name>format</Name>
+                <Operations>RW</Operations>
+                <MultipleInstances>Single</MultipleInstances>
+                <Mandatory>Optional</Mandatory>
+                <Type>String</Type>
+                <RangeEnumeration/>
+                <Units/>
+                <Description>The available video formats.</Description>
+            </Item>
+            <Item ID="14">
+                <Name>framerate</Name>
+                <Operations>RW</Operations>
+                <MultipleInstances>Single</MultipleInstances>
+                <Mandatory>Optional</Mandatory>
+                <Type>Integer</Type>
+                <RangeEnumeration/>
+                <Units/>
+                <Description>The frame rate of the video in frames per second.</Description>
+            </Item>
+            <Item ID="15">
+                <Name>bitdepth</Name>
+                <Operations>RW</Operations>
+                <MultipleInstances>Single</MultipleInstances>
+                <Mandatory>Optional</Mandatory>
+                <Type>Integer</Type>
+                <RangeEnumeration/>
+                <Units/>
+                <Description>Bit (Colour) depth is either the number of bits used to indicate the colour of a single pixel, in a bitmapped image or video framebuffer, or the number of bits used for each colour component of a single pixel.</Description>
+            </Item>
+            <Item ID="16">
+                <Name>size</Name>
+                <Operations>RW</Operations>
+                <MultipleInstances>Single</MultipleInstances>
+                <Mandatory>Optional</Mandatory>
+                <Type>Float</Type>
+                <RangeEnumeration/>
+                <Units/>
+                <Description>The size of the video in KB - Kilo-Bytes</Description>
+            </Item>
+            <Item ID="17">
+                <Name>duration</Name>
+                <Operations>RW</Operations>
+                <MultipleInstances>Single</MultipleInstances>
+                <Mandatory>Optional</Mandatory>
+                <Type>String</Type>
+                <RangeEnumeration/>
+                <Units/>
+                <Description>Duration is the total length of the media audio with format pattern according to ISO 8601 (duration). For example, P0Y0M0DT1H22M59S represents a duration of 1 hour, 22 minutes, and 59 seconds.</Description>
+            </Item>
+            <Item ID="18">
+                <Name>location</Name>
+                <Operations>RW</Operations>
+                <MultipleInstances>Single</MultipleInstances>
+                <Mandatory>Optional</Mandatory>
+                <Type>String</Type>
+                <RangeEnumeration/>
+                <Units/>
+                <Description>Location is the user-friendly string of the geographic location of the video.</Description>
+            </Item>
+            <Item ID="19">
+                <Name>geolocation</Name>
+                <Operations>RW</Operations>
+                <MultipleInstances>Single</MultipleInstances>
+                <Mandatory>Optional</Mandatory>
+                <Type>unknown (object)</Type>
+                <RangeEnumeration/>
+                <Units/>
+                <Description/>
+            </Item>
+            <Item ID="20">
+                <Name>language</Name>
+                <Operations>RW</Operations>
+                <MultipleInstances>Single</MultipleInstances>
+                <Mandatory>Optional</Mandatory>
+                <Type>String</Type>
+                <RangeEnumeration/>
+                <Units/>
+                <Description>Current language of the video media content with format pattern according to RFC 5646 language tag</Description>
+            </Item>
+        </Resources>
+    </Object>
+</LWM2M>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+copyright 2016-2017, 2019 Open Connectivity Foundation, Inc. All rights reserved.
+BSD-3-Clause
+-->
+<LWM2M xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://openmobilealliance.org/tech/profiles/LWM2M.xsd">
+    <Object ObjectType="MODefinition">
+        <Name>consumable</Name>
+        <Description1>This Resource specifies a thing that can be consumed such as filter material, printer toner etc The Propert "typeofconsumable" is an enumeration defining the thing being consumed as defined by the Smart Home Device Specification The Property "remaining" is an integer capturing the percentatge remaining life The Property "orderpercentage" is an integer capturing the percentage life at which replacement or replenishment is recommended by the manufacturer The Property "url" is a string containing a URL at which further information may be obtained with respect to the consumable.</Description1>
+        <ObjectID>65535</ObjectID>
+        <ObjectURN>urn:oma:lwm2m:ext:65535</ObjectURN>
+        <LWM2MVersion>1.0</LWM2MVersion>
+        <ObjectVersion>1.0</ObjectVersion>
+        <MultipleInstances>Multiple</MultipleInstances>
+        <Mandatory>Optional</Mandatory>
+        <Resources>
+            <Item ID="1">
+                <Name>remaining</Name>
+                <Operations>R</Operations>
+                <MultipleInstances>Single</MultipleInstances>
+                <Mandatory>Mandatory</Mandatory>
+                <Type>Unsigned Integer</Type>
+                <RangeEnumeration>0..100</RangeEnumeration>
+                <Units/>
+                <Description>The percentage remaining lifespan.</Description>
+            </Item>
+            <Item ID="2">
+                <Name>typeofconsumable</Name>
+                <Operations>R</Operations>
+                <MultipleInstances>Single</MultipleInstances>
+                <Mandatory>Mandatory</Mandatory>
+                <Type>String</Type>
+                <RangeEnumeration/>
+                <Units/>
+                <Description>The thing that is being consumed.</Description>
+            </Item>
+            <Item ID="3">
+                <Name>url</Name>
+                <Operations>R</Operations>
+                <MultipleInstances>Single</MultipleInstances>
+                <Mandatory>Optional</Mandatory>
+                <Type>String</Type>
+                <RangeEnumeration/>
+                <Units/>
+                <Description>The URL at which additional ordering information may be found.</Description>
+            </Item>
+            <Item ID="4">
+                <Name>orderpercentage</Name>
+                <Operations>R</Operations>
+                <MultipleInstances>Single</MultipleInstances>
+                <Mandatory>Optional</Mandatory>
+                <Type>Unsigned Integer</Type>
+                <RangeEnumeration>0..100</RangeEnumeration>
+                <Units/>
+                <Description>The percentage at which re-ordering is recommended by the manufacturer.</Description>
+            </Item>
+        </Resources>
+    </Object>
+</LWM2M>

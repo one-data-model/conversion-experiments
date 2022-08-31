@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+copyright 2016-2017, 2019 Open Connectivity Foundation, Inc. All rights reserved.
+BSD-3-Clause
+-->
+<LWM2M xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://openmobilealliance.org/tech/profiles/LWM2M.xsd">
+    <Object ObjectType="MODefinition">
+        <Name>colour.chroma</Name>
+        <Description1>This Resource describes the colour using chroma conventions. Properties are "hue", "saturation", "csc", and "ct". The Property "hue" is the hue angle, it is an integer value as defined by the CIECAM02 model definition (see reference [CIE CIE159:2004]). The Property "saturation" is an integer value as defined by the CIECAM02 model definition (see reference [CIE CIE159:2004]). The Property "maximumsaturation" is the upper bound on the saturation supported by the Device. If not present the maximum value for "saturation" is 32767. The Property "csc" is the colour space coordinates in CIE colour space. The first item in the array is the X coordinate. The second item in the array is the Y coordinate. The Property "nct" is the Mired colour temperature. The Resource provides the colour using chroma conventions.</Description1>
+        <ObjectID>65535</ObjectID>
+        <ObjectURN>urn:oma:lwm2m:ext:65535</ObjectURN>
+        <LWM2MVersion>1.0</LWM2MVersion>
+        <ObjectVersion>1.0</ObjectVersion>
+        <MultipleInstances>Multiple</MultipleInstances>
+        <Mandatory>Optional</Mandatory>
+        <Resources>
+            <Item ID="1">
+                <Name>ct</Name>
+                <Operations>RW</Operations>
+                <MultipleInstances>Single</MultipleInstances>
+                <Mandatory>Optional</Mandatory>
+                <Type>Unsigned Integer</Type>
+                <RangeEnumeration/>
+                <Units/>
+                <Description>The Mired colour temperature.</Description>
+            </Item>
+            <Item ID="2">
+                <Name>hue</Name>
+                <Operations>RW</Operations>
+                <MultipleInstances>Single</MultipleInstances>
+                <Mandatory>Mandatory</Mandatory>
+                <Type>Float</Type>
+                <RangeEnumeration>0..360</RangeEnumeration>
+                <Units/>
+                <Description>The hue angle as defined by the CIECAM02 model definition.</Description>
+            </Item>
+            <Item ID="3">
+                <Name>saturation</Name>
+                <Operations>RW</Operations>
+                <MultipleInstances>Single</MultipleInstances>
+                <Mandatory>Mandatory</Mandatory>
+                <Type>Unsigned Integer</Type>
+                <RangeEnumeration>0..32767</RangeEnumeration>
+                <Units/>
+                <Description>The saturation as defined by the CIECAM02 model definition.</Description>
+            </Item>
+            <Item ID="4">
+                <Name>maximumsaturation</Name>
+                <Operations>R</Operations>
+                <MultipleInstances>Single</MultipleInstances>
+                <Mandatory>Optional</Mandatory>
+                <Type>Unsigned Integer</Type>
+                <RangeEnumeration>0..32767</RangeEnumeration>
+                <Units/>
+                <Description>The maximum supported value of "saturation" for this Device.</Description>
+            </Item>
+            <Item ID="5">
+                <Name>csc</Name>
+                <Operations>RW</Operations>
+                <MultipleInstances>Multiple</MultipleInstances>
+                <Mandatory>Mandatory</Mandatory>
+                <Type>Float</Type>
+                <RangeEnumeration/>
+                <Units/>
+                <Description>The X and Y coordinates of the colour in CIE colour space</Description>
+            </Item>
+        </Resources>
+    </Object>
+</LWM2M>

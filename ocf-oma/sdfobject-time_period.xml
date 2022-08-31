@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+copyright 2016-2017, 2019, 2020 Open Connectivity Foundation, Inc. All rights reserved.
+BSD-3-Clause
+-->
+<LWM2M xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://openmobilealliance.org/tech/profiles/LWM2M.xsd">
+    <Object ObjectType="MODefinition">
+        <Name>time.period</Name>
+        <Description1>This Resource describes the time period over which any additionally provided information is derived or bounded. The Property "startTime" and "stopTime" are RFC3339 encoded strings. The Property "startTime" must be present. The interval is the interval of the time period in minutes, if present this value must be no less than 0 minute. The intervalsecond is the interval of the time period in seconds, if present this value must be numerical zero or greater. The repeat is the number of the time period's iteration, which means how many times to repeat the time period. The Property "repeat" accepts only negative one, numerical zero, and positive number. When this value is numerical zero, the time period will be repeated infinitely until a client makes it stop by inputting negative one for the value. The Property "stoptime" and "interval" are mutually exclusive; both Properties cannot be present in a Resource instance. The Property "intervalsecond" cannot be presented with the Property "stopTime". In case of both the Property "interval" and "intervalsecond" are presented together, the total time interval is the sum of "interval" and "intervalsecond". The Property "triggertiming" describes a specific time to execute an action. This property must have one of the values among "startTime", "stopTime", and "totalInterval". The totalInterval means the sum of the Property "interval" and "intervalsecond". If one of the properties does not exist, the value of the unexpressed property is taken as a numerical zero. The Property "state" describes a state of time interval. This property must have one of the values among "preInterval", "inInterval", and "postInterval". The Resource defines a time period for information retrieval, action or other behaviour.</Description1>
+        <ObjectID>65535</ObjectID>
+        <ObjectURN>urn:oma:lwm2m:ext:65535</ObjectURN>
+        <LWM2MVersion>1.0</LWM2MVersion>
+        <ObjectVersion>1.0</ObjectVersion>
+        <MultipleInstances>Multiple</MultipleInstances>
+        <Mandatory>Optional</Mandatory>
+        <Resources>
+            <Item ID="1">
+                <Name>interval</Name>
+                <Operations>RW</Operations>
+                <MultipleInstances>Single</MultipleInstances>
+                <Mandatory>Optional</Mandatory>
+                <Type>Unsigned Integer</Type>
+                <RangeEnumeration/>
+                <Units/>
+                <Description>The time interval in minutes after the "startTime", if present the Property "stopTime" cannot be present.</Description>
+            </Item>
+            <Item ID="2">
+                <Name>intervalsecond</Name>
+                <Operations>RW</Operations>
+                <MultipleInstances>Single</MultipleInstances>
+                <Mandatory>Optional</Mandatory>
+                <Type>Unsigned Integer</Type>
+                <RangeEnumeration/>
+                <Units/>
+                <Description>The time interval in seconds after the "startTime", if present the Property "stopTime" cannot be present.</Description>
+            </Item>
+            <Item ID="3">
+                <Name>stopTime</Name>
+                <Operations>RW</Operations>
+                <MultipleInstances>Single</MultipleInstances>
+                <Mandatory>Optional</Mandatory>
+                <Type>String</Type>
+                <RangeEnumeration/>
+                <Units/>
+                <Description>The stop time for the time period, if present the Property "interval" or "intervalsecond" cannot be present.</Description>
+            </Item>
+            <Item ID="4">
+                <Name>startTime</Name>
+                <Operations>RW</Operations>
+                <MultipleInstances>Single</MultipleInstances>
+                <Mandatory>Mandatory</Mandatory>
+                <Type>String</Type>
+                <RangeEnumeration/>
+                <Units/>
+                <Description>The start time for the time period.</Description>
+            </Item>
+            <Item ID="5">
+                <Name>repeat</Name>
+                <Operations>RW</Operations>
+                <MultipleInstances>Single</MultipleInstances>
+                <Mandatory>Optional</Mandatory>
+                <Type>Integer</Type>
+                <RangeEnumeration/>
+                <Units/>
+                <Description>The number of times to repeat the time period</Description>
+            </Item>
+            <Item ID="6">
+                <Name>triggertiming</Name>
+                <Operations>RW</Operations>
+                <MultipleInstances>Single</MultipleInstances>
+                <Mandatory>Optional</Mandatory>
+                <Type>String</Type>
+                <RangeEnumeration/>
+                <Units/>
+                <Description>The desired timing to trigger an action execution</Description>
+            </Item>
+            <Item ID="7">
+                <Name>state</Name>
+                <Operations>R</Operations>
+                <MultipleInstances>Single</MultipleInstances>
+                <Mandatory>Optional</Mandatory>
+                <Type>String</Type>
+                <RangeEnumeration/>
+                <Units/>
+                <Description>The current state of the time interval</Description>
+            </Item>
+        </Resources>
+    </Object>
+</LWM2M>

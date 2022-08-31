@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+copyright 2020 Open Connectivity Foundation, Inc. All rights reserved.
+BSD-3-Clause
+-->
+<LWM2M xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://openmobilealliance.org/tech/profiles/LWM2M.xsd">
+    <Object ObjectType="MODefinition">
+        <Name>location.civic</Name>
+        <Description1>This Resource describes the properties associated with the current civic location. The Properties modelled follow the definition of the Location Object provided by RFC 4119 and clarified by RFC 5774. If a Device supports this Resource but has no defined content for it (yet) the response to a RETRIEVE contains just the "name" Property containing an empty string</Description1>
+        <ObjectID>65535</ObjectID>
+        <ObjectURN>urn:oma:lwm2m:ext:65535</ObjectURN>
+        <LWM2MVersion>1.0</LWM2MVersion>
+        <ObjectVersion>1.0</ObjectVersion>
+        <MultipleInstances>Multiple</MultipleInstances>
+        <Mandatory>Optional</Mandatory>
+        <Resources>
+            <Item ID="1">
+                <Name>country</Name>
+                <Operations>RW</Operations>
+                <MultipleInstances>Single</MultipleInstances>
+                <Type>String</Type>
+                <RangeEnumeration/>
+                <Units/>
+                <Description>The Country using the ISO 3166 two letter code.</Description>
+            </Item>
+            <Item ID="2">
+                <Name>national-a1</Name>
+                <Operations>RW</Operations>
+                <MultipleInstances>Single</MultipleInstances>
+                <Type>String</Type>
+                <RangeEnumeration/>
+                <Units/>
+                <Description>The National subdivision (state, province etc).</Description>
+            </Item>
+            <Item ID="3">
+                <Name>region-a2</Name>
+                <Operations>RW</Operations>
+                <MultipleInstances>Single</MultipleInstances>
+                <Type>String</Type>
+                <RangeEnumeration/>
+                <Units/>
+                <Description>The Regional subdivision (county, parish, district etc).</Description>
+            </Item>
+            <Item ID="4">
+                <Name>city-a3</Name>
+                <Operations>RW</Operations>
+                <MultipleInstances>Single</MultipleInstances>
+                <Type>String</Type>
+                <RangeEnumeration/>
+                <Units/>
+                <Description>The City, Township, or similar.</Description>
+            </Item>
+            <Item ID="5">
+                <Name>citydivision-a4</Name>
+                <Operations>RW</Operations>
+                <MultipleInstances>Single</MultipleInstances>
+                <Type>String</Type>
+                <RangeEnumeration/>
+                <Units/>
+                <Description>The division within a City or Town.</Description>
+            </Item>
+            <Item ID="6">
+                <Name>block-a5</Name>
+                <Operations>RW</Operations>
+                <MultipleInstances>Single</MultipleInstances>
+                <Type>String</Type>
+                <RangeEnumeration/>
+                <Units/>
+                <Description>The block or neighbourhood.</Description>
+            </Item>
+            <Item ID="7">
+                <Name>street-a6</Name>
+                <Operations>RW</Operations>
+                <MultipleInstances>Single</MultipleInstances>
+                <Type>String</Type>
+                <RangeEnumeration/>
+                <Units/>
+                <Description>The Street name.</Description>
+            </Item>
+            <Item ID="8">
+                <Name>prd</Name>
+                <Operations>RW</Operations>
+                <MultipleInstances>Single</MultipleInstances>
+                <Type>String</Type>
+                <RangeEnumeration/>
+                <Units/>
+                <Description>Leading Street Direction.</Description>
+            </Item>
+            <Item ID="9">
+                <Name>pod</Name>
+                <Operations>RW</Operations>
+                <MultipleInstances>Single</MultipleInstances>
+                <Type>String</Type>
+                <RangeEnumeration/>
+                <Units/>
+                <Description>Trailing Street Suffix.</Description>
+            </Item>
+            <Item ID="10">
+                <Name>sts</Name>
+                <Operations>RW</Operations>
+                <MultipleInstances>Single</MultipleInstances>
+                <Type>String</Type>
+                <RangeEnumeration/>
+                <Units/>
+                <Description>Street Suffix.</Description>
+            </Item>
+            <Item ID="11">
+                <Name>buildingnumber</Name>
+                <Operations>RW</Operations>
+                <MultipleInstances>Single</MultipleInstances>
+                <Type>Integer</Type>
+                <RangeEnumeration/>
+                <Units/>
+                <Description>House or Building Number.</Description>
+            </Item>
+            <Item ID="12">
+                <Name>buildingnumbersuffix</Name>
+                <Operations>RW</Operations>
+                <MultipleInstances>Single</MultipleInstances>
+                <Type>String</Type>
+                <RangeEnumeration/>
+                <Units/>
+                <Description>Building Number Suffix.</Description>
+            </Item>
+            <Item ID="13">
+                <Name>landmark</Name>
+                <Operations>RW</Operations>
+                <MultipleInstances>Single</MultipleInstances>
+                <Type>String</Type>
+                <RangeEnumeration/>
+                <Units/>
+                <Description>Landmark or vanity address.</Description>
+            </Item>
+            <Item ID="14">
+                <Name>loc</Name>
+                <Operations>RW</Operations>
+                <MultipleInstances>Single</MultipleInstances>
+                <Type>String</Type>
+                <RangeEnumeration/>
+                <Units/>
+                <Description>Additional location information.</Description>
+            </Item>
+            <Item ID="15">
+                <Name>flr</Name>
+                <Operations>RW</Operations>
+                <MultipleInstances>Single</MultipleInstances>
+                <Type>Integer</Type>
+                <RangeEnumeration/>
+                <Units/>
+                <Description>Floor of the building. Zero (0) represents the floor that is at street (ground) level.</Description>
+            </Item>
+            <Item ID="16">
+                <Name>name</Name>
+                <Operations>RW</Operations>
+                <MultipleInstances>Single</MultipleInstances>
+                <Type>String</Type>
+                <RangeEnumeration/>
+                <Units/>
+                <Description>Resident, Business etc.</Description>
+            </Item>
+            <Item ID="17">
+                <Name>postalcode</Name>
+                <Operations>RW</Operations>
+                <MultipleInstances>Single</MultipleInstances>
+                <Type>String</Type>
+                <RangeEnumeration/>
+                <Units/>
+                <Description>Postal or Zip code.</Description>
+            </Item>
+        </Resources>
+    </Object>
+</LWM2M>

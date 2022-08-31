@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Copyright 2019 Open Connectivity Foundation, Inc. All rights reserved.
+BSD-3-Clause
+-->
+<LWM2M xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://openmobilealliance.org/tech/profiles/LWM2M.xsd">
+    <Object ObjectType="MODefinition">
+        <Name>iaszoneinfo</Name>
+        <Description1>This Resource describes information associated with an Intruder Alert System (IAS) Zone. Zone Type provides the information about the type of device/alarm. Zone Status provides an array which has 10 items representing various status information(e. g. , battery status, mode, alarm (Up to two), supervision of IAS network, etc. A Device implementing this Resource can be enrolled to IAS Control and Indicator Equipment (CIE). IAS CIE can allocate an ID for the Device and update this Resource on the Device. This Resource may provide multiple sensitivity levels (>2). NumberofZoneSensitivityLevelSupported provides the number of the levels. A specific level can be selected as currentzonesensitivityLevel.</Description1>
+        <ObjectID>65535</ObjectID>
+        <ObjectURN>urn:oma:lwm2m:ext:65535</ObjectURN>
+        <LWM2MVersion>1.0</LWM2MVersion>
+        <ObjectVersion>1.0</ObjectVersion>
+        <MultipleInstances>Multiple</MultipleInstances>
+        <Mandatory>Optional</Mandatory>
+        <Resources>
+            <Item ID="1">
+                <Name>zonestate</Name>
+                <Operations>R</Operations>
+                <MultipleInstances>Single</MultipleInstances>
+                <Mandatory>Optional</Mandatory>
+                <Type>Boolean</Type>
+                <RangeEnumeration/>
+                <Units/>
+                <Description>The IAS zone state. True = enrolled, False = not enrolled.</Description>
+            </Item>
+            <Item ID="2">
+                <Name>zonestatus</Name>
+                <Operations>R</Operations>
+                <MultipleInstances>Single</MultipleInstances>
+                <Mandatory>Optional</Mandatory>
+                <Type>unknown (object)</Type>
+                <RangeEnumeration/>
+                <Units/>
+                <Description>Set of alarm indicators.</Description>
+            </Item>
+            <Item ID="3">
+                <Name>numzonesensitivitylevel</Name>
+                <Operations>R</Operations>
+                <MultipleInstances>Single</MultipleInstances>
+                <Mandatory>Optional</Mandatory>
+                <Type>Integer</Type>
+                <RangeEnumeration/>
+                <Units/>
+                <Description>Number of supported zone sensitivity levels</Description>
+            </Item>
+            <Item ID="4">
+                <Name>zoneid</Name>
+                <Operations>R</Operations>
+                <MultipleInstances>Single</MultipleInstances>
+                <Mandatory>Optional</Mandatory>
+                <Type>Integer</Type>
+                <RangeEnumeration/>
+                <Units/>
+                <Description>ID allocated by the IAS CIE</Description>
+            </Item>
+            <Item ID="5">
+                <Name>iascieaddress</Name>
+                <Operations>R</Operations>
+                <MultipleInstances>Single</MultipleInstances>
+                <Mandatory>Optional</Mandatory>
+                <Type>String</Type>
+                <RangeEnumeration/>
+                <Units/>
+                <Description>EUI-64 Address of the enrolled IAS Control and Indicating Equipment (CIE)</Description>
+            </Item>
+            <Item ID="6">
+                <Name>zonetype</Name>
+                <Operations>R</Operations>
+                <MultipleInstances>Single</MultipleInstances>
+                <Mandatory>Optional</Mandatory>
+                <Type>String</Type>
+                <RangeEnumeration/>
+                <Units/>
+                <Description>IAS zone type. See OCF enumeration map for set of valid values.</Description>
+            </Item>
+            <Item ID="7">
+                <Name>currentzonesensitivitylevel</Name>
+                <Operations>RW</Operations>
+                <MultipleInstances>Single</MultipleInstances>
+                <Mandatory>Mandatory</Mandatory>
+                <Type>Integer</Type>
+                <RangeEnumeration/>
+                <Units/>
+                <Description>Current zone sensitivity level, Client can only set 1 or higher.</Description>
+            </Item>
+        </Resources>
+    </Object>
+</LWM2M>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+copyright 2021 Open Connectivity Foundation, Inc. All rights reserved.
+BSD-3-Clause
+-->
+<LWM2M xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://openmobilealliance.org/tech/profiles/LWM2M.xsd">
+    <Object ObjectType="MODefinition">
+        <Name>tv.apps</Name>
+        <Description1>This Resource describes an app launch function, which can show an app list and the launched app. The Property "applist" is a list of applications already installed. The Property "app" is the name of the application which the user wants to launch. The property "status" is current operation status of application or set operation. running : App is running or launch app, stopped : App is stopped or stop app. When an app is launched any currently running app is automatically stopped.</Description1>
+        <ObjectID>65535</ObjectID>
+        <ObjectURN>urn:oma:lwm2m:ext:65535</ObjectURN>
+        <LWM2MVersion>1.0</LWM2MVersion>
+        <ObjectVersion>1.0</ObjectVersion>
+        <MultipleInstances>Multiple</MultipleInstances>
+        <Mandatory>Optional</Mandatory>
+        <Resources>
+            <Item ID="1">
+                <Name>applist</Name>
+                <Operations>R</Operations>
+                <MultipleInstances>Multiple</MultipleInstances>
+                <Mandatory>Optional</Mandatory>
+                <Type>String</Type>
+                <RangeEnumeration/>
+                <Units/>
+                <Description>The list of the applications already installed. The list shall include "none" as meaning no app launched</Description>
+            </Item>
+            <Item ID="2">
+                <Name>app</Name>
+                <Operations>RW</Operations>
+                <MultipleInstances>Single</MultipleInstances>
+                <Mandatory>Mandatory</Mandatory>
+                <Type>String</Type>
+                <RangeEnumeration/>
+                <Units/>
+                <Description>The name of application which the user wants to control.</Description>
+            </Item>
+            <Item ID="3">
+                <Name>status</Name>
+                <Operations>RW</Operations>
+                <MultipleInstances>Single</MultipleInstances>
+                <Mandatory>Mandatory</Mandatory>
+                <Type>String</Type>
+                <RangeEnumeration/>
+                <Units/>
+                <Description>Desired operational status of the application. running : App is running, stopped : App is stopped.</Description>
+            </Item>
+        </Resources>
+    </Object>
+</LWM2M>

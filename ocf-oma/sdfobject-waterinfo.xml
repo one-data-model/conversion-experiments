@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Copyright 2019 Open Connectivity Foundation, Inc. All rights reserved.
+BSD-3-Clause
+-->
+<LWM2M xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://openmobilealliance.org/tech/profiles/LWM2M.xsd">
+    <Object ObjectType="MODefinition">
+        <Name>waterinfo</Name>
+        <Description1>This Resource describes the water information to indicate type of water currently provided by the device. The water type can be read or set. The Property "supportedwatertypes" is an array of the possible water types are defined by the enumeration ["cold", "hot", "ambient", "ice"]. The Property "supportedadditivetypes" is an array of the possible additive types for water. The additive types mean optional types that can be added to the specific water type according to Client's preference and are defined by the enumeration ["none", "soda", "mineral"]. If absent, the default value is "none". The Property "currentwatertype" is the currently desired water type. The Property "currentadditivetypes" is the currently desired additive type(s). For example, if "cold" is selected with the "currentwatertype", "soda" and "mineral" or both can be selected as "currentadditivetypes". Note that if "hot" is selected with the "currentwatertype", "soda" and "mineral" may be restricted for the "currentadditivetypes".</Description1>
+        <ObjectID>65535</ObjectID>
+        <ObjectURN>urn:oma:lwm2m:ext:65535</ObjectURN>
+        <LWM2MVersion>1.0</LWM2MVersion>
+        <ObjectVersion>1.0</ObjectVersion>
+        <MultipleInstances>Multiple</MultipleInstances>
+        <Mandatory>Optional</Mandatory>
+        <Resources>
+            <Item ID="1">
+                <Name>supportedwatertypes</Name>
+                <Operations>R</Operations>
+                <MultipleInstances>Multiple</MultipleInstances>
+                <Mandatory>Optional</Mandatory>
+                <Type>String</Type>
+                <RangeEnumeration/>
+                <Units/>
+                <Description>The array of the possible water types.</Description>
+            </Item>
+            <Item ID="2">
+                <Name>supportedadditivetypes</Name>
+                <Operations>R</Operations>
+                <MultipleInstances>Multiple</MultipleInstances>
+                <Mandatory>Optional</Mandatory>
+                <Type>String</Type>
+                <RangeEnumeration/>
+                <Units/>
+                <Description>The array of the possible additive types.</Description>
+            </Item>
+            <Item ID="3">
+                <Name>currentwatertype</Name>
+                <Operations>RW</Operations>
+                <MultipleInstances>Single</MultipleInstances>
+                <Mandatory>Mandatory</Mandatory>
+                <Type>String</Type>
+                <RangeEnumeration/>
+                <Units/>
+                <Description>Set the desired water type.</Description>
+            </Item>
+            <Item ID="4">
+                <Name>currentadditivetypes</Name>
+                <Operations>RW</Operations>
+                <MultipleInstances>Multiple</MultipleInstances>
+                <Mandatory>Optional</Mandatory>
+                <Type>String</Type>
+                <RangeEnumeration/>
+                <Units/>
+                <Description>Set the desired additive type(s).</Description>
+            </Item>
+        </Resources>
+    </Object>
+</LWM2M>

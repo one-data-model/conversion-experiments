@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+copyright 2016-2017, 2019 Open Connectivity Foundation, Inc. All rights reserved.
+BSD-3-Clause
+-->
+<LWM2M xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://openmobilealliance.org/tech/profiles/LWM2M.xsd">
+    <Object ObjectType="MODefinition">
+        <Name>energy.drlc</Name>
+        <Description1>This Resource describes any to be applied or currently being applied DRLC signal. The Property "DRType" is the ApplianceLoadReductionType defined in Zigbee/HA Smart Energy Profile 2. 0. The Property "start" is a string containing an RFC3339 encoded start time. The Property "duration" value is in minutes. The Property "Override" indicates whether the consumer has overridden the request (true) or not (false). The Resource provides the current DRLC action that is being applied. A duration of 0 (zero) means that no DRLC is currently active.</Description1>
+        <ObjectID>65535</ObjectID>
+        <ObjectURN>urn:oma:lwm2m:ext:65535</ObjectURN>
+        <LWM2MVersion>1.0</LWM2MVersion>
+        <ObjectVersion>1.0</ObjectVersion>
+        <MultipleInstances>Multiple</MultipleInstances>
+        <Mandatory>Optional</Mandatory>
+        <Resources>
+            <Item ID="1">
+                <Name>start</Name>
+                <Operations>RW</Operations>
+                <MultipleInstances>Single</MultipleInstances>
+                <Mandatory>Optional</Mandatory>
+                <Type>String</Type>
+                <RangeEnumeration/>
+                <Units/>
+                <Description>The start time for the application of DR.</Description>
+            </Item>
+            <Item ID="2">
+                <Name>duration</Name>
+                <Operations>RW</Operations>
+                <MultipleInstances>Single</MultipleInstances>
+                <Mandatory>Optional</Mandatory>
+                <Type>Unsigned Integer</Type>
+                <RangeEnumeration/>
+                <Units/>
+                <Description>The duration of the to be applied DR type in minutes. A value of 0 means no applied DR.</Description>
+            </Item>
+            <Item ID="3">
+                <Name>override</Name>
+                <Operations>RW</Operations>
+                <MultipleInstances>Single</MultipleInstances>
+                <Mandatory>Optional</Mandatory>
+                <Type>Boolean</Type>
+                <RangeEnumeration/>
+                <Units/>
+                <Description>Whether the consumer has overriden the application of DR.</Description>
+            </Item>
+            <Item ID="4">
+                <Name>DRType</Name>
+                <Operations>RW</Operations>
+                <MultipleInstances>Single</MultipleInstances>
+                <Mandatory>Mandatory</Mandatory>
+                <Type>Integer</Type>
+                <RangeEnumeration/>
+                <Units/>
+                <Description>The to be applied demand-response type.</Description>
+            </Item>
+            <Item ID="5">
+                <Name>drlevel</Name>
+                <Operations>RW</Operations>
+                <MultipleInstances>Single</MultipleInstances>
+                <Mandatory>Optional</Mandatory>
+                <Type>Unsigned Integer</Type>
+                <RangeEnumeration>0..3</RangeEnumeration>
+                <Units/>
+                <Description>Indicator of the strength of the DR response that is requested; 0-0%, 1-30%, 2-50%, 3-70%</Description>
+            </Item>
+            <Item ID="6">
+                <Name>mandate</Name>
+                <Operations>RW</Operations>
+                <MultipleInstances>Single</MultipleInstances>
+                <Mandatory>Optional</Mandatory>
+                <Type>Boolean</Type>
+                <RangeEnumeration/>
+                <Units/>
+                <Description>Whether overriding the DR request by the consumer is allowed</Description>
+            </Item>
+        </Resources>
+    </Object>
+</LWM2M>
